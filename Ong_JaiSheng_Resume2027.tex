@@ -1,0 +1,217 @@
+%-------------------------
+% Resume — styled after reference (Nathan Nguyen template)
+% Fonts & metrics matched to reference PDF via pdfplumber analysis
+% Author: Jai Sheng Ong
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% --- Packages ---
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{myblack}{rgb}{0, 0, 0}
+\usepackage[
+  colorlinks=true,
+  urlcolor=myblack,
+  linkcolor=black
+]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[
+  top=0.5in,
+  bottom=0.5in,
+  left=0.5in,
+  right=0.5in
+]{geometry}
+
+% --- Page style ---
+\setlength{\footskip}{5pt}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------------------------
+% Section formatting
+% Reference: CMCSC10 at 12pt (scshape large, NOT bold) + full-width rule
+%-------------------------
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule\vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+%-------------------------
+
+% Two-line subheading (Education & Experience)
+% Line 1: \textbf{title/university}  right: plain date/location (normalsize)
+% Line 2: \textit{\small degree/org}  right: \textit{\small date/location}
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-1pt}\item
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\[-1pt]
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-6pt}
+}
+
+% Single-line project heading
+% Line 1: \textbf{Name | Tech Stack}
+\newcommand{\resumeProjectHeading}[1]{%
+  \vspace{-1pt}\item
+  \textbf{#1}\vspace{-6pt}%
+}
+
+% Bullet item: \small body text, matching reference CMR10 at 10pt
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1\vspace{-1pt}}%
+}
+
+% Outer list: wraps subheadings, leftmargin=0.15in matches reference x=46.8-36=10.8pt
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[leftmargin=0.15in, label={}]%
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Inner bullet list: stacked inside outer → total from text start ≈ 0.48in
+% (matches reference bullet text at x=70.8-36=34.8pt)
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[
+    leftmargin=0.33in,
+    label=$\bullet$,
+    itemsep=1pt,
+    topsep=1pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]%
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%=========================================
+\begin{document}
+
+%-----------HEADER-----------
+% Name: CMBX12 at 24.88pt = \Huge\bfseries in 11pt doc
+\begin{center}
+  {\Huge\bfseries Jai Sheng Ong} \\[3pt]
+  \small
+  (513) 918-9488
+  $\;|\;$
+  \href{mailto:ongjs@mail.uc.edu}{ongjs@mail.uc.edu}
+  $\;|\;$
+  \href{https://linkedin.com/in/jaisheng-ong}{\underline{linkedin.com/in/jaisheng-ong}}
+  $\;|\;$
+  \href{https://github.com/jaisheng-ong}{\underline{github.com/jaisheng-ong}}
+\end{center}
+
+\vspace{-6pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  % Line 1: Bold university + plain location (right)
+  % Line 2: Italic degree + italic date (right)
+  \resumeSubheading
+    {University of Cincinnati}{Cincinnati, OH}
+    {Bachelor of Science, Computer Science \textnormal{---} GPA: 3.57}{Expected May 2028}
+  \resumeItemListStart
+    \resumeItem{Relevant Coursework: Data Structures, Database Design \& Development, Software Engineering}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Cincinnati State Technical and Community College}{Cincinnati, OH}
+    {Associate of Applied Science, Software Engineering Technology \textnormal{---} GPA: 3.74}{Graduated: Spring 2024}
+  \resumeItemListStart
+    \resumeItem{Relevant Coursework: System Analysis \& Design, Python Object-Oriented Programming}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Software Developer T\&I}{Aug 2026 -- Present}
+    {Siemens Digital Industries Software $|$ Internship}{United States}
+  \resumeItemListStart
+    \resumeItem{Conducting Research and Development on innovative algorithms to confront business needs.}
+  \resumeItemListEnd
+
+  % Line 1: Bold job title + plain date (right)
+  % Line 2: Italic organization + italic location (right)
+  \resumeSubheading
+    {Machine Learning Researcher}{Jan 2026 -- May 2026}
+    {Ming Chi University of Technology $|$ Internship}{Taiwan}
+  \resumeItemListStart
+    \resumeItem{\textbf{Architected an end-to-end machine learning pipeline} in Python to predict highly volatile industrial wastewater metrics.}
+    \resumeItem{\textbf{Engineered advanced time-series features} by implementing a \textbf{2D-state Kalman filter} and \textbf{ARIMA} one-step-ahead forecasting, effectively de-noising sensor volatility and completely eliminating temporal data leakage.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineer}{May 2025 -- Aug 2025}
+    {Aubot $|$ Internship}{Remote}
+  \resumeItemListStart
+    \resumeItem{\textbf{Reduced lesson publishing time by 30\%} by auditing and correcting 120+ technical, grammar, and clarity errors across 10+ advanced \textbf{Python} course documents.}
+    \resumeItem{\textbf{Strengthened content reliability} by authoring automated test scripts to catch incorrect solution methods and contributing targeted fixes via \textbf{Git} pull requests across a collaborative codebase.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  % Line 1: Bold "Name | Tech Stack" + plain date (right)
+  %\resumeProjectHeading
+  %  {Sleep-Sack Duo $|$ Prototyping, Product Engineering}
+  %\resumeItemListStart
+  %  \resumeItem{Directed a 4-person team through a full prototyping lifecycle to reduce infant mortality among homeless families in San Jose, CA, delivering a functional proof-of-concept within one semester.}
+  %  \resumeItem{Engineered a dual-purpose insulated jacket with sleeping bag extension and baby holder, satisfying all design targets: $10{^\circ}$F warmth retention, 5-minute water resistance, and 10 lb load capacity.}
+  %\resumeItemListEnd
+
+  \resumeProjectHeading
+    {WasteWater-COD-Forecast $|$ \textnormal{\textit{Python}, \textit{PyCaret}, \textit{Jupyter}, \textit{Optuna}}}
+  \resumeItemListStart
+    \resumeItem{Preprocessed a small-scale industrial sensor dataset from MCUT's wastewater facility by studying plant process context, mapping raw feature semantics to physical treatment stages, and resolving missing values.}
+    \resumeItem{Applied VIF-based feature selection to remove multicollinear predictors, motivating time-series feature engineering via \textbf{Kalman filtering} and \textbf{ARIMA} forecasting to surface temporal patterns.}
+    \resumeItem{Trained an \textbf{Extra Trees} regressor on the engineered features and analyzed importance scores to interpret which derived signals most strongly drove target predictions.}
+    \resumeItem{Implemented \textbf{LSTM} as a sequence-learning baseline; attributed its underperformance to insufficient training samples for deep learning, empirically validating Extra Trees as the appropriate model for small-scale edge deployment.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {Mini-Messenger $|$ \textnormal{\textit{Node.js}, \textit{Express}, \textit{Socket.io}, \textit{MongoDB Atlas}, \textit{Azure}}}
+  \resumeItemListStart
+    \resumeItem{Recreated a real-time web messenger (Node.js, Socket.io, MongoDB Atlas) with 
+    a \textbf{5-person Agile team} across 3 sprints, delivering \textbf{14 features} including 
+    authenticated chat, private messaging, and real-time presence tracking.}
+    \resumeItem{Owned \textbf{Azure App Services} deployment and \textbf{GitHub Actions CI/CD pipelines} across 
+    3 branches; integrated the \textbf{MongoDB} database layer connecting the full server 
+    and storage stack for the team's Sprint 2 features.}
+    \resumeItem{Applied \textbf{defense-in-depth security} across all layers — \textbf{bcrypt} password hashing, CSP headers, and \textbf{DOMPurify} XSS sanitization to protect 
+    against XSS, NoSQL injection, and credential attacks}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \item\small{
+    \textbf{Languages:} Python, C++, VB, Assembly, MatLab, NI LabVIEW, R \\[1pt]
+    \textbf{Web Development:} JavaScript, HTML, CSS, PHP \\[1pt]
+    \textbf{Frameworks \& Libraries:} React, Node.js, Express, Socket.io, PyCaret, Optuna \\[1pt]
+    \textbf{Databases:} MySQL, MongoDB \\[1pt]
+    \textbf{Tools \& Platforms:} Git, GitHub, Azure, Linux (Ubuntu), LaTeX, Jupyter Notebook \\[1pt]
+    \textbf{Product Skills:} Agile Methodologies, Scrum, Data Analysis (SQL, Python, Excel)
+  }
+\resumeSubHeadingListEnd
+
+\vspace{4pt}
+\begin{center}
+  \small Available for Co-op/Internship: \textbf{Summer 2027}
+\end{center}
+
+\end{document}
