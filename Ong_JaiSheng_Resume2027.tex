@@ -134,11 +134,12 @@
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Software Development Intern}{Aug 2026 -- Dec 2026}
+    {Software Development Intern (MBSE \& Knowledge Graphs)}{Aug 2026 -- Dec 2026}
     {Siemens Digital Industries Software $|$ Full-time}{United States}
   \resumeItemListStart
-    \resumeItem{\textbf{Developed and extended SysML v2 $\leftrightarrow$ Knowledge Graph conversion pipelines} to support native \textbf{Xpedition} and \textbf{Opcenter} graph data, retaining \textbf{96\%+ of model facts} across conversions.}
-    \resumeItem{\textbf{Drove adoption across the team} by delivering demo videos and architecture diagrams on conversion process, enabling internal uses across Siemens data, including research toward an \textbf{IEEE SysCon 2027} paper.}
+    \resumeItem{Extended a bidirectional \textbf{SysML v2 $\leftrightarrow$ RDF Knowledge Graph} converter in \textbf{Python} (\textbf{rdflib, SPARQL, SHACL}); round-tripped an Adaptive Cruise Control model retaining \textbf{99.99\% of facts}.}
+    \resumeItem{Applied the \textbf{KG $\rightarrow$ SysML v2} path to native \textbf{Xpedition-MBE} and \textbf{Opcenter} RDF graphs; a partner team's triple-by-triple check recovered \textbf{97.5\% of 300K+ triples}.}
+    \resumeItem{Delivered demo videos and architecture diagrams of the conversion process, leading a department team to reuse the pipeline on their data; co-authoring an \textbf{IEEE SysCon 2027} paper on the results.}
   \resumeItemListEnd
 
   % Line 1: Bold job title + plain date (right)
@@ -147,10 +148,9 @@
     {Machine Learning Research Intern}{Jan 2026 -- May 2026}
     {Ming Chi University of Technology $|$ Full-time}{Taiwan}
   \resumeItemListStart
-    \resumeItem{\textbf{Architected an end-to-end machine learning pipeline} in Python to predict highly volatile industrial wastewater metrics.}
-    \resumeItem{\textbf{Engineered advanced time-series features} by implementing a \textbf{2D-state Kalman filter} and \textbf{ARIMA} one-step-ahead forecasting, effectively de-noising sensor volatility and completely eliminating temporal data leakage.}
+    \resumeItem{Architected an end-to-end machine learning pipeline in Python to predict highly volatile industrial wastewater metrics.}
+    \resumeItem{Engineered time-series features via a \textbf{2D-state Kalman filter} and \textbf{ARIMA} one-step-ahead forecasting, de-noising sensor volatility without temporal leakage and lifting model \textbf{R$^2$ from $\sim$0.2 to $\sim$0.9}.}
   \resumeItemListEnd
-
   \resumeSubheading
     {Software Engineer Intern}{May 2025 -- Aug 2025}
     {Aubot $|$ Full-time}{Remote}
@@ -176,10 +176,8 @@
   \resumeProjectHeading
     {WasteWater-COD-Forecast $|$ \textnormal{\textit{Python}, \textit{PyCaret}, \textit{Jupyter}, \textit{Optuna}}}
   \resumeItemListStart
-    \resumeItem{Preprocessed a small-scale industrial sensor dataset from MCUT's wastewater facility by studying plant process context, mapping raw feature semantics to physical treatment stages, and resolving missing values.}
-    \resumeItem{Applied VIF-based feature selection to remove multicollinear predictors, motivating time-series feature engineering via \textbf{Kalman filtering} and \textbf{ARIMA} forecasting to surface temporal patterns.}
-    \resumeItem{Trained an \textbf{Extra Trees} regressor on the engineered features and analyzed importance scores to interpret which derived signals most strongly drove target predictions.}
-    \resumeItem{Implemented \textbf{LSTM} as a sequence-learning baseline; attributed its underperformance to insufficient training samples for deep learning, empirically validating Extra Trees as the appropriate model for small-scale edge deployment.}
+    \resumeItem{Preprocessed MCUT wastewater sensor data (treatment-stage feature mapping, missing-value resolution); pruned multicollinear predictors via \textbf{VIF} and engineered temporal features via \textbf{Kalman filtering} and \textbf{ARIMA}.}
+    \resumeItem{Trained an \textbf{Extra Trees} regressor and benchmarked it against an \textbf{LSTM} baseline; traced LSTM underperformance to limited samples, validating Extra Trees for small-scale edge deployment.}
   \resumeItemListEnd
 
   \resumeProjectHeading
@@ -203,8 +201,7 @@
   \item\small{
     \textbf{Languages:} Python, C++, VB, Assembly, MatLab, NI LabVIEW, R \\[1pt]
     \textbf{Web Development:} JavaScript, HTML, CSS, PHP \\[1pt]
-    \textbf{MBSE \& Semantic Web:} SysML v2, OWL/RDF (Turtle), SPARQL, SHACL, Knowledge Graphs \\[1pt]
-    \textbf{Frameworks \& Libraries:} React, Node.js, Express, Socket.io, PyCaret, Optuna, rdflib \\[1pt]
+    \textbf{Frameworks \& Libraries:} Node.js, Express, Socket.io, PyCaret, Optuna, rdflib \\[1pt]
     \textbf{Databases:} MySQL, MongoDB \\[1pt]
     \textbf{Tools \& Platforms:} Git, GitHub, Azure, Linux (Ubuntu), LaTeX, Jupyter Notebook, Claude Code, GitHub Copilot \\[1pt]
     \textbf{Product Skills:} Agile Methodologies, Scrum, Data Analysis (SQL, Python, Excel)
